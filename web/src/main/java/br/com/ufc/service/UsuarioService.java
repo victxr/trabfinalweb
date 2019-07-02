@@ -1,0 +1,24 @@
+package br.com.ufc.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import br.com.ufc.model.Usuario;
+import br.com.ufc.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	public void cadastrar(Usuario usuario) {
+		
+		usuario.setSenha(new BCryptPasswordEncoder().encode(usuario.getSenha()));
+		
+		
+		usuarioRepository.save(usuario);
+	}
+
+}

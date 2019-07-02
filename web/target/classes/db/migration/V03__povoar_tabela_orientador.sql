@@ -1,0 +1,10 @@
+INSERT INTO orientador (nome) VALUES ("Julio");
+INSERT INTO orientador (nome) VALUES ("Atilio");
+INSERT INTO orientador (nome) VALUES ("Anderson");
+INSERT INTO orientador (nome) VALUES ("Araruna");
+INSERT INTO orientador (nome) VALUES ("Aragão");
+INSERT INTO orientador (nome) VALUES ("Fabio");
+INSERT INTO orientador (nome) VALUES ("Paulo");
+INSERT INTO orientador (nome) VALUES ("Filho");
+INSERT INTO orientador (nome) VALUES ("Tecio");
+INSERT INTO orientador (nome) VALUES ("Livia");

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulário</title>
+</head>
+<body>
+
+<form action="/usuario/salvar" method="POST">
+Nome:
+	<input type="text" name="nome"><br>
+Matricula:
+	<input type="text" name="matricula"><br>
+Data Nascimento:
+	<input type="text" name="nascimento"><br>
+Bolsa:
+	<input type="text" name="bolsa"><br>
+Orientador:	
+	<select name="idOrientador">
+        <option th:each="orientador: ${orientadores}"
+                th:value="${orientador.id}"
+                th:text="${orientador.nome}"/>
+    </select>
+	<br>
+Senha:
+	<input type="password" name="senha"><br>
+	
+	<input type="submit" value="Cadastrar">
+
+</form>
+
+</body>
+</html>
