@@ -1,0 +1,26 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Página de listagem</title>
+</head>
+<body>
+
+<a href="/usuario/formulario">Cadastrar</a>
+
+<table>
+	<tr th:each = "usuario: ${listaDeUsuarios}">
+		<td th:text="${usuario.codigo}"></td>
+		<td th:text="${usuario.login}"></td>
+		<td th:text="${usuario.senha}"></td>
+		<td>
+			<a th:href="@{/usuario/excluir/{codigo}(codigo = ${usuario.codigo})}">Excluir</a>
+		</td>
+		<td>
+			<a th:href="@{/usuario/atualizar/{codigo}(codigo = ${usuario.codigo})}">Atualizar</a>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
